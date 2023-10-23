@@ -1,0 +1,10 @@
+# tutorial: doc/tutorial.pdf
+terminals:
+  - container: main
+    script: /opt/su_user.sh
+before: |-
+  # This lab requires to disable the address space randomization
+  sudo sysctl -w kernel.randomize_va_space=0
+after: |-
+  # Reset the address space randomization to default
+  sudo sysctl -w kernel.randomize_va_space=2

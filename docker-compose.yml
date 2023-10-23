@@ -1,0 +1,6 @@
+name: buffer-overflow
+services:
+  main:
+    build: ./main
+    user: root
+    # privileged: true
